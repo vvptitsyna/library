@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+body {
+  font-family: "Roboto";
+}
+
+a:active {
+
+}
+
+a:visited {
+  color: black;
+}
+header {
+  min-height: 50px;
+  background: white;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 3px solid;
+  border-color: #6C2D2C;
+}
+
+.logo{
+color: #6C2D2C;
+text-shadow: 0 1px 0 #333232;
+font-size: 25px;
+font-family: "Russo One";
+font-weight: bold;
+}
+
+ul{
+  list-style-type: none;
+  display: flex;
+}
+.navbox {
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 15px;
+  transition: .4s;
+}
+
+@media screen and (max-width:800px){
+.unclose,.veplotnuma{
+display: block;
+max-width:815px;
+}
+
+nav{
+position: fixed;
+width: 100%;
+height: 100vh;
+background: linear-gradient(180deg, #094b6d, #0e9e9e);
+top: 0;
+right: -100%;
+text-align: center;
+padding: 100px 0;
+transition: .7s
+}
+ul{
+flex-direction: column;
+}
+.navbox{
+padding: 15px;
+}
+.navbox:hover{
+  color: yellow;
+}
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/mybase.css' %}">
+    <title>Пора читать</title>
+</head>
+<body>
+<header>
+  <div class="logo">ВРЕМЯ <font color="#9F4636">КНИГ</font></div>
+  <nav>
+  <ul>
+<li><a class="navbox" href="#">КНИГИ</a></li>
+<li><a class="navbox" href="#">АВТОРЫ</a></li>
+<li><a class="navbox" href="#">ЖАНРЫ</a></li>
+<li><a class="navbox" href="#">ВХОД/РЕГИСТРАЦИЯ</a></li>
+  </ul>
+  </nav>
+</header>
+
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>
