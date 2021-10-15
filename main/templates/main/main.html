@@ -1,5 +1,22 @@
 {%extends 'layout/base.html' %}
-
+{%load static  %}
 {% block content %}
-<h1> GLAVNAYA</h1>
+<div class="book_of_the_day">
+    <div class="text_block_book_of_the_day">
+        <div class="main_block1_text">КНИГА ДНЯ</div>
+        <div class="vr_line"></div>
+    </div>
+    <div class="image_book_block">
+        <div class="border_image">
+            <div class="image_book"> <img src="{%static 'admin/img/test.jpg'%}"></div>
+        </div>
+    </div>
+    <div class="about_book_of_the_day">
+
+    </div>
+</div>
+
+    <div class="popular_now">
+
+    </div>
 {% endblock content %}

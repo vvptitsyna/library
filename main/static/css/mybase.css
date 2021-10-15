@@ -1,37 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
 
 body {
-  font-family: "Roboto";
-}
-
-a:active {
-
+  font-family: 'Roboto', sans-serif;
+  background: #FAF9F7;
 }
 
 a:visited {
   color: black;
 }
+a:hover {
+  color: #6C2D2C;
+}
 header {
-  min-height: 50px;
-  background: white;
-  padding: 0 15px;
+  min-height: 30px;
+  padding: 10px 25px 0px 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 3px solid;
-  border-color: #6C2D2C;
+  margin-bottom: 50px;
 }
 
 .logo{
-color: #6C2D2C;
+color: #000011;
 text-shadow: 0 1px 0 #333232;
 font-size: 25px;
-font-family: "Russo One";
+font-family: "Roboto";
 font-weight: bold;
 }
 
 ul{
-  list-style-type: none;
   display: flex;
 }
 .navbox {
@@ -39,25 +36,20 @@ ul{
   text-transform: uppercase;
   text-decoration: none;
   padding: 0 15px;
-  transition: .4s;
 }
 
 @media screen and (max-width:800px){
-.unclose,.veplotnuma{
-display: block;
-max-width:815px;
-}
 
 nav{
+  display: block;
+max-width:815px;
 position: fixed;
 width: 100%;
 height: 100vh;
-background: linear-gradient(180deg, #094b6d, #0e9e9e);
 top: 0;
 right: -100%;
 text-align: center;
 padding: 100px 0;
-transition: .7s
 }
 ul{
 flex-direction: column;
@@ -68,4 +60,68 @@ padding: 15px;
 .navbox:hover{
   color: yellow;
 }
+}
+
+<!-- -->
+.book_of_the_day {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 450px;
+}
+
+.text_block_book_of_the_day {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 48px;
+  height: 450px;
+  padding-left: 45px;
+}
+.main_block1_text {
+  display: flex;
+  white-space: nowrap;
+  font-size: 48px;
+  transform: rotate(90deg);
+}
+.vr_line {
+  display: flex;
+  position: relative;
+  top: -5%;
+  left: 50%;
+  border-left: black 3px solid;
+  width: 1px;
+  height: 150px;
+}
+
+.image_book_block {
+margin-left: 50px;
+}
+
+.border_image {
+  position: absolute;
+  top: 115px;
+  height: 400px;
+  width: 300px;
+  border: black 1px solid;
+}
+
+.image_book {
+  position: relative;
+  top: -6%;
+  left: 8%;
+  height: 400px;
+  width: 300px;
+}
+.image_book img {
+
+  height: 400px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.about_book_of_the_day {
+  width: inherit;
+  height: 450px;
+  display: flex;
 }
