@@ -1,0 +1,14 @@
+{%extends 'layout/base.html' %}
+{%load static  %}
+{% block content %}
+
+    <div class="background_books">
+    {% for book in books %}
+        <div class="frame_book">
+        <p>{{ book.name }}</p>
+        <p>{{ book.author.name }}</p>
+        </div>
+    {% endfor %}
+
+    </div>
+{% endblock content %}

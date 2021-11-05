@@ -19,4 +19,7 @@ def homeindex(request):
         'book_random': book_random,
     }
     return render(request, 'main/main.html', context=context)
-# Create your views here.
+
+def books(request):
+
+    return render(request, 'main/books.html')

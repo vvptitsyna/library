@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
 {% load main_tags %}
-{% get_books as books %}
+{% get_books as books%}
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -12,10 +12,10 @@
 </head>
 <body>
 <header>
-  <div class="logo">BOOK <font color="#9F4636">TIME</font></div>
+  <a href="{% url 'main:home' %}"><div class="logo">BOOK <font color="#9F4636">TIME</font></div></a>
   <nav>
   <ul>
-<li><a class="navbox" href="#">КНИГИ</a></li>
+<li><a class="navbox" href="{% url 'main:books' %}" >КНИГИ</a></li>
 <li><a class="navbox" href="#">АВТОРЫ</a></li>
 <li><a class="navbox" href="#">ЖАНРЫ</a></li>
 <li><a class="navbox" href="#">ПОДБОРКИ</a></li>
