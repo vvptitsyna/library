@@ -12,11 +12,34 @@
         </div>
     </div>
     <div class="about_book_of_the_day">
+        <div class="name_book"><p>{{book_random.name}}</p></div>
+        <div class="author">{{book_random.author.name}}</div>
+        <div class="description_book">
+            <p>{{book_random.description}}</p>
+        </div>
+    </div>
 
+    <div class="button_download">
+        <div><p>СКАЧАТЬ</p></div>
+         <div class="arrow arrow-right"></div>
     </div>
 </div>
 
-    <div class="popular_now">
+    <div class="compilation_of_the_day">
+        <div class="about_compilation_block">
+            <div class="name_compilation_of_the_day">
+                <p>10 книг, которые поразили мир</p>
+                    <div class="list_book">
+                        <div class="image_book_compilation"> <img src="{%static 'admin/img/test.jpg'%}"></div>
+                        <div class="image_book_compilation"> <img src="{%static 'admin/img/test.jpg'%}"></div>
+                        <div class="image_book_compilation"> <img src="{%static 'admin/img/test.jpg'%}"></div>
+                    </div>
+            </div>
 
-    </div>
+        </div>
+        <div class="text_block_compilation_of_the_day">
+            <div class="main_block2_text">ПОДБОРКА ДНЯ</div>
+            <div class="vr_line2"></div>
+        </div>
+    <div>
 {% endblock content %}

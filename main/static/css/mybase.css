@@ -68,6 +68,7 @@ padding: 15px;
   align-items: center;
   width: 100%;
   height: 450px;
+  margin-bottom: 50px;
 }
 
 .text_block_book_of_the_day {
@@ -95,7 +96,10 @@ padding: 15px;
 }
 
 .image_book_block {
+  display: flex;
 margin-left: 50px;
+  height: 450px;
+  width: 330px;
 }
 
 .border_image {
@@ -112,6 +116,7 @@ margin-left: 50px;
   left: 8%;
   height: 400px;
   width: 300px;
+box-shadow: -12px 10px 0 2px #F24822;
 }
 .image_book img {
 
@@ -121,7 +126,144 @@ margin-left: 50px;
 }
 
 .about_book_of_the_day {
-  width: inherit;
+  flex-wrap: wrap;
+  width: 600px;
   height: 450px;
   display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+
+.name_book {
+  font-size: 40px;
+  color: #F24822;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-bottom: 10px;
+}
+.author {
+font-size: 30px;
+  color: #231C1C;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.description_book {
+  width: 540px;
+  margin-top: 40px;
+  text-align: justify;
+  background-color: #231C1C;
+  color: #FAF9F7;
+  padding: 20px;
+  box-shadow: 10px 10px 0 3px #F24822;
+}
+
+.button_download {
+  background-color: #231C1C;
+  color: #FAF9F7;
+  width: 220px;
+  height: 30px;
+  padding: 14px 2px 14px 15px;
+  margin-left: 20px;
+  font-size: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+.arrow {
+      display: flex;
+      width: 15px;
+      height: 15px;
+      border-top: 3px solid #FAF9F7;
+      border-right: 3px solid #FAF9F7;
+      align-self: center;
+      margin-left: 50px;
+  }
+
+.arrow-right {
+      transform: rotate(45deg);
+  }
+
+.button_download:hover {
+  box-shadow: 12px 10px 0 2px #FAF9F7, 12px 10px 0 4px #F24822;
+  transition: .4s;
+}
+
+.button_download:hover .arrow {
+  border-color:#F24822;
+  transition: .4s;
+}
+
+
+
+.compilation_of_the_day {
+  display: flex;
+  width: 100%;
+  height: 450px;
+  margin-bottom: 50px;
+  background-color: #231C1C;
+  padding-top: 30px;
+}
+
+.text_block_compilation_of_the_day {
+  color: #FAF9F7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 48px;
+  height: 450px;
+  padding-right: 45px;
+    margin-left: 50px;
+}
+.main_block2_text {
+  display: flex;
+  white-space: nowrap;
+  font-size: 48px;
+  transform: rotate(90deg);
+}
+
+.vr_line2 {
+  display: flex;
+  position: relative;
+  top: -5%;
+  left: 50%;
+  border-left: #FAF9F7 3px solid;
+  width: 1px;
+  height: 50px;
+}
+
+.about_compilation_block {
+    display: flex;
+    position: relative;
+    margin-right:300px;
+    margin-left: 60px;
+  width: 1000px;
+}
+.name_compilation_of_the_day {
+  font-size: 40px;
+  color: #4AC1F7;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-bottom: 10px;
+}
+
+.list_book {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+
+}
+
+.image_book_compilation {
+  height: 230px;
+  width: 180px;
+  box-shadow: -1px 1px 0 0px #FAF9F7,-8px 8px 0 0px #231C1C, 1px -1px 0 0px #FAF9F7, -9px 9px 0 0px #FAF9F7 ;
+
+}
+
+.image_book_compilation img {
+
+  height: 230px;
+  width: 180px;
+  object-fit: cover;
 }
