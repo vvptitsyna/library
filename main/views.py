@@ -14,7 +14,9 @@ def get_random_book():
                 return book_random
 
 def homeindex(request):
-    books = Book.objects.all()
     book_random = get_random_book()
-    return render(request, 'main/main.html', {'books': books, 'book_random': book_random})
+    context = {
+        'book_random': book_random,
+    }
+    return render(request, 'main/main.html', context=context)
 # Create your views here.
