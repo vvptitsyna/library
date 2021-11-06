@@ -3,11 +3,11 @@
 {% block content %}
 
     <div class="background_books">
-    {% for book in collection_books %}
+    {% for author in authors %}
         <div class="frame_book">
-        <p>{{ book.name }}</p>
-        <p>{{ book.author.name }}</p>
-        <a href="{% url 'main:show_book' book.slug %}">подробнее</a>
+        <p>{{ author.name }}</p>
+        <p>{{ author.about_author }}</p>
+        <a href="{% url 'main:show_author' author.slug %}">подробнее</a>
         </div>
     {% endfor %}
     </div>

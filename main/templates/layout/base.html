@@ -16,14 +16,22 @@
   <nav>
   <ul>
 <li><a class="navbox" href="{% url 'main:books' %}" >КНИГИ</a></li>
-<li><a class="navbox" href="#">АВТОРЫ</a></li>
-<li><a class="navbox" href="#">ЖАНРЫ</a></li>
-<li><a class="navbox" href="#">ПОДБОРКИ</a></li>
+<li><a class="navbox" href="{% url 'main:authors' %}">АВТОРЫ</a></li>
+<li><a class="navbox" href="{% url 'main:genres' %}">ЖАНРЫ</a></li>
   </ul>
   </nav>
 </header>
 
     {% block content %}
     {% endblock content %}
+<div>
+        <ul>
+            {% for page in paginator.page_range %}
+                <li>
+                <a href="?page={{ page }}">{{ page }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        </div>
 </body>
 </html>
