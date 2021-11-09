@@ -4,10 +4,15 @@
 
     <div class="background_books">
     {% for author in authors %}
-        <div class="frame_book">
-        <p>{{ author.name }}</p>
-        <p>{{ author.about_author }}</p>
-        <a href="{% url 'main:show_author' author.slug %}">подробнее</a>
+        <div class="frame_author">
+            <div class="frame_author_photo">
+                <img src="{{ book.photo.url }}">
+            </div>
+            <div class="about_author">
+                <div class="name_author"><p>{{ author.name }}</p></div>
+                <div class="description_author"><p>{{ author.about_author|linebreaks }}</p></div>
+                    <a href="{% url 'main:show_author' author.slug %}">подробнее</a>
+            </div>
         </div>
     {% endfor %}
     </div>

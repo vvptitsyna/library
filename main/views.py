@@ -27,7 +27,7 @@ class homeindex(ListView):
 
 
 class books(ListView):
-    paginate_by = 9
+    paginate_by = 8
     model = Book
     template_name = 'main/books.html'
     context_object_name = 'collection_books'
@@ -37,7 +37,7 @@ class books(ListView):
         return context
 
 class authors(ListView):
-    paginate_by = 2
+    paginate_by = 6
     model = Author
     template_name = 'main/authors.html'
     context_object_name = 'authors'
@@ -47,7 +47,7 @@ class authors(ListView):
         return context
 
 class genres(ListView):
-    paginate_by = 9
+    paginate_by = 6
     model = Genre
     template_name = 'main/genres.html'
     context_object_name = 'genres'
@@ -67,9 +67,22 @@ class ShowAuthor(DetailView):
     template_name = 'main/author.html'
     slug_url_kwarg = 'author_slug'
     context_object_name = 'author'
+    collection_book = Book.objects.all()
+    extra_context = {'collection_book': collection_book}
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
 
 class ShowGenre(DetailView):
     model = Genre
     template_name = 'main/genre.html'
     slug_url_kwarg = 'genre_slug'
     context_object_name = 'genre'
+    aaa = Book.genre.through.objects.all()
+    bookforid = Book.objects.all()
+    extra_context = {'BookList': aaa, 'bookforid': bookforid}
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context

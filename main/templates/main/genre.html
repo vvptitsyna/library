@@ -2,6 +2,14 @@
 {%load static  %}
 {% block content %}
 
-   <h1>{{ genre.name }}</h1>
+
+    <h1>{{ genre.name }}</h1>
+    {% for a in BookList %}
+        {% for book in bookforid %}
+            {% if a.genre_id == genre.pk and a.book_id == book.pk%}
+                    <h5>{{book.name}}</h5>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
 
 {% endblock content %}

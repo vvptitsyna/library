@@ -4,9 +4,8 @@
 
     <div class="background_books">
     {% for genre in genres %}
-        <div class="frame_book">
-        <p>{{ genre.name }}</p>
-        <a href="{% url 'main:show_genre' genre.slug %}">подробнее</a>
+        <div class="frame_genres">
+        <a href="{% url 'main:show_genre' genre.slug %}">{{ genre.name }}</a>
         </div>
     {% endfor %}
     </div>

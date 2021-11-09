@@ -287,9 +287,97 @@ font-size: 30px;
 }
 
 .frame_book {
-  width: 350px;
-  height: 300px;
+  width: 490px;
+  height: 250px;
   border: 1px solid black;
   background-color: #FAF9F7;
   margin-bottom: 30px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.frame_book_photo {
+  height: 210px;
+  width: 150px;
+  box-shadow: -1px 1px 0 0px #FAF9F7,-8px 8px 0 0px #231C1C, 1px -1px 0 0px #FAF9F7, -9px 9px 0 0px #FAF9F7 ;
+}
+
+.frame_book_photo img {
+  height: 210px;
+  width: 150px;
+  object-fit: cover;
+}
+
+.about_book {
+  margin-left: 10px;
+}
+
+.description_book_books {
+  text-align: justify;
+}
+
+.name_book_books {
+  font-size: 20px;
+  color: #F24822;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-bottom: 3px;
+}
+
+.author_book_books {
+  color: #9F4636;
+  margin-bottom: 6px;
+}
+
+.frame_author {
+  width: 1100px;
+  height: 260px;
+  border: 1px solid black;
+  background-color: #FAF9F7;
+  margin-bottom: 30px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.frame_author_photo {
+  height: 250px;
+  width: 180px;
+  box-shadow: -1px 1px 0 0px #FAF9F7,-8px 8px 0 0px #231C1C, 1px -1px 0 0px #FAF9F7, -9px 9px 0 0px #FAF9F7 ;
+  margin-left: 17px;
+  margin-bottom: 20px;
+}
+
+.frame_author_photo img {
+  height: 250px;
+  width: 180px;
+  object-fit: cover;
+}
+.name_author {
+  font-size: 30px;
+  color: #F24822;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-bottom: 20px;
+}
+
+.about_author {
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  padding-right: 45px;
+}
+.description_author {
+   text-align: justify;
+}
+
+.frame_genres {
+  font-size: 60px;
+  width: 500px;
+  height: 80px;
+  border-bottom: #FAF9F7 2px solid;
+  color: #FAF9F7;
+
 }

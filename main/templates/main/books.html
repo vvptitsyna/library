@@ -5,9 +5,17 @@
     <div class="background_books">
     {% for book in collection_books %}
         <div class="frame_book">
-        <p>{{ book.name }}</p>
-        <p>{{ book.author.name }}</p>
-        <a href="{% url 'main:show_book' book.slug %}">подробнее</a>
+            <div class="frame_book_photo">
+                <img src="{{ book.photo.url }}">
+            </div>
+            <div class="about_book">
+             <div class="name_book_books"><p>{{ book.name }}</p></div>
+            <div class="author_book_books"><p>{{ book.author.name }}</p></div>
+                <div class="description_book_books">
+                <p>{{ book.description|truncatewords:50 }}</p>
+                </div>
+                <a href="{% url 'main:show_book' book.slug %}">подробнее</a>
+            </div>
         </div>
     {% endfor %}
     </div>
